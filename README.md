@@ -1,4 +1,5 @@
-# AppSamurai Ad SDK 
+# AppSamurai Ad SDK
+[![alt text](https://appsamurai.com/wp-content/uploads/2018/10/as_dark_logotype-8.png "AppSamurai")](https://www.appsamurai.com)
 ## Getting Started
 ### Using CocoaPods
 AppSamuraiAdSDK is available through [CocoaPods](https://cocoapods.org). To install
@@ -26,7 +27,20 @@ ASMobileAds.initialize(applicationId: "appsamurai-sample-ios-app-id")
 ```objc
 [ASMobileAds initializeWithApplicationId:@"appsamurai-sample-ios-app-id"];
 ```
----
+## Test Units
+AppSamuraiAdSDK uses test ads when one of the following conditions satisfy;
+* Application runs on simulator,
+* If test `applicationId` is used for ASMobileAds initialization.  
+* If test `adUnitId` is used for ad unit creation.
+* If `testDevices`  of `ASAdRequest` is set. (There will be log to show how to use `testDevices` when you call `loadAd` before request was made.)
+## Log Level
+AppSamuraiAdSDK logging level can be changed with `setLogLevel` after  `ASMobileAds.initialize` call.
+```swift
+ASMobileAds.setLogLevel(logLevel: .debug)
+```
+```objc
+[ASMobileAds setLogLevelWithLogLevel:ASLogLevelDebug];
+```
 ## Banner Ads
 You need to create a ASBannerView to display banner ads. It can be done via two approaches;
 * From Storyboard
@@ -322,3 +336,4 @@ func rewardBasedVideoAdWillLeaveApplication(_ asRewardBasedAd: ASRewardBasedVide
 App Samurai Mobile Team, mobile@appsamurai.com
 ## License
 Copyright 2018 App Samurai Inc.
+[![alt text](https://appsamurai.com/wp-content/uploads/2014/12/web_home_cta_2.png "AppSamurai")](https://www.appsamurai.com)
