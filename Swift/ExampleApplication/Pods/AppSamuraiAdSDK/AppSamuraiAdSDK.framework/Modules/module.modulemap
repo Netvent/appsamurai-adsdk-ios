@@ -1,0 +1,11 @@
+framework module AppSamuraiAdSDK {
+  umbrella header "AppSamuraiAdSDK.h"
+
+  export *
+  module * { export * }
+}
+
+module AppSamuraiAdSDK.Swift {
+    header "AppSamuraiAdSDK-Swift.h"
+    requires objc
+}

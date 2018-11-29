@@ -1,0 +1,7 @@
+source 'https://github.com/CocoaPods/Specs.git'
+
+target 'ExampleApplication' do
+  platform :ios, '8.0'
+  use_frameworks!
+  pod 'AppSamuraiAdSDK'
+end

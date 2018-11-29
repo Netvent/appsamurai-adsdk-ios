@@ -1,0 +1,179 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="w0i-HU-zv6">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Ad Formats List-->
+        <scene sceneID="i4f-JJ-ygO">
+            <objects>
+                <viewController id="mdR-rp-eNh" userLabel="Ad Formats List" customClass="TableViewController" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="lNg-Ke-fMg">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="BasicCell" textLabel="Mm9-2m-5hK" style="IBUITableViewCellStyleDefault" id="9TB-ir-2Ew" userLabel="BasicCell">
+                                <rect key="frame" x="0.0" y="28" width="375" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="9TB-ir-2Ew" id="qZf-s4-akp">
+                                    <rect key="frame" x="0.0" y="0.0" width="341" height="43.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Mm9-2m-5hK">
+                                            <rect key="frame" x="16" y="0.0" width="324" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <fontDescription key="fontDescription" type="boldSystem" pointSize="16"/>
+                                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Ad Format List" id="zxN-mz-JWp" userLabel="Ad Format List">
+                        <barButtonItem key="backBarButtonItem" title="Back" id="0iM-lM-NK4"/>
+                    </navigationItem>
+                    <connections>
+                        <segue destination="fSy-ON-555" kind="show" identifier="banner350x50FromStoryboardSegue" id="X6S-42-d5L"/>
+                        <segue destination="iDx-tQ-2Gn" kind="show" identifier="banner320x50ProgramaticallySegue" id="k9f-dA-fZa"/>
+                        <segue destination="NuG-iU-TmW" kind="show" identifier="interstitialSegue" id="xPh-v2-EON"/>
+                        <segue destination="GBH-RA-PAK" kind="show" identifier="rewardBasedVideoAdSegue" id="dPK-c0-IVB"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="aeR-74-xKa" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="996" y="-565"/>
+        </scene>
+        <!--Banner From Storyboard View Controller-->
+        <scene sceneID="f8h-wy-bKJ">
+            <objects>
+                <viewController id="fSy-ON-555" customClass="BannerFromStoryboardViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="IEv-0m-8Jk">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="oqS-Hk-wAh" customClass="ASBannerView">
+                                <rect key="frame" x="27.5" y="308.5" width="320" height="50"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="ZCR-Th-gMz"/>
+                                    <constraint firstAttribute="width" constant="320" id="sB9-lb-Lhz"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="oqS-Hk-wAh" firstAttribute="centerY" secondItem="IEv-0m-8Jk" secondAttribute="centerY" id="8sy-29-WXS"/>
+                            <constraint firstItem="oqS-Hk-wAh" firstAttribute="centerX" secondItem="IEv-0m-8Jk" secondAttribute="centerX" id="JlB-Z3-HM3"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="X1b-Fl-mxi"/>
+                    </view>
+                    <connections>
+                        <outlet property="asBannerView" destination="oqS-Hk-wAh" id="6EE-RZ-AzY"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="EOb-QP-LLR" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2037.5999999999999" y="-1266.1169415292354"/>
+        </scene>
+        <!--Interstitial View Controller-->
+        <scene sceneID="TQe-xd-yxW">
+            <objects>
+                <viewController id="NuG-iU-TmW" customClass="InterstitialViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="y7E-HL-hfd">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="s5t-PV-lDe">
+                                <rect key="frame" x="103.5" y="315.5" width="168" height="36"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <state key="normal" title="Show Interstitial Ad"/>
+                                <connections>
+                                    <action selector="onShowInterstitialAdClicked:" destination="NuG-iU-TmW" eventType="touchUpInside" id="bzg-cc-4bg"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="s5t-PV-lDe" firstAttribute="centerX" secondItem="y7E-HL-hfd" secondAttribute="centerX" id="F1U-Sr-3bm"/>
+                            <constraint firstItem="s5t-PV-lDe" firstAttribute="centerY" secondItem="y7E-HL-hfd" secondAttribute="centerY" id="J6t-De-yMJ"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="bGy-LZ-b5W"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="cnS-ja-VWj" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2039" y="-565"/>
+        </scene>
+        <!--Reward Based Video Ad View Controller-->
+        <scene sceneID="uku-vd-Ai1">
+            <objects>
+                <viewController id="GBH-RA-PAK" customClass="RewardBasedVideoAdViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="iKL-kF-BVX">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EtG-wv-7f5">
+                                <rect key="frame" x="56.5" y="315.5" width="262" height="36"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <state key="normal" title="Show Reward Based Video Ad"/>
+                                <connections>
+                                    <action selector="onShowRewardBasedVideoAdClicked:" destination="GBH-RA-PAK" eventType="touchUpInside" id="lxz-bC-Oxu"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="EtG-wv-7f5" firstAttribute="centerX" secondItem="iKL-kF-BVX" secondAttribute="centerX" id="DeW-iw-aXg"/>
+                            <constraint firstItem="EtG-wv-7f5" firstAttribute="centerY" secondItem="iKL-kF-BVX" secondAttribute="centerY" id="hIZ-ZJ-JBA"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="PNA-xD-YJT"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="j5J-PA-mSE" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2038" y="214"/>
+        </scene>
+        <!--Banner Programatically View Controller-->
+        <scene sceneID="OZL-aK-02W">
+            <objects>
+                <viewController id="iDx-tQ-2Gn" customClass="BannerProgramaticallyViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="jFF-zD-WCb">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="mko-Ct-LeL"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Hle-Iv-hEn" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2842" y="-1266"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="nf7-Hy-Hew">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="w0i-HU-zv6" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="4KU-mi-yt5">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="mdR-rp-eNh" kind="relationship" relationship="rootViewController" id="XBs-0h-Q3v"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="zZG-ck-EEm" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="136.80000000000001" y="-565.36731634182911"/>
+        </scene>
+    </scenes>
+</document>
