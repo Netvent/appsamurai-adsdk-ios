@@ -186,8 +186,23 @@ typedef unsigned int swift_uint4  __attribute__((__ext_vector_type__(4)));
 #endif
 
 
+SWIFT_CLASS("_TtC15AppSamuraiAdSDK10ASAdFormat")
+@interface ASAdFormat : NSObject
+- (nonnull instancetype)init SWIFT_UNAVAILABLE;
++ (nonnull instancetype)new SWIFT_DEPRECATED_MSG("-init is unavailable");
+SWIFT_CLASS_PROPERTY(@property (nonatomic, class, readonly, strong) ASAdFormat * _Nonnull html;)
++ (ASAdFormat * _Nonnull)html SWIFT_WARN_UNUSED_RESULT;
+SWIFT_CLASS_PROPERTY(@property (nonatomic, class, readonly, strong) ASAdFormat * _Nonnull video;)
++ (ASAdFormat * _Nonnull)video SWIFT_WARN_UNUSED_RESULT;
+SWIFT_CLASS_PROPERTY(@property (nonatomic, class, readonly, strong) ASAdFormat * _Nonnull playable;)
++ (ASAdFormat * _Nonnull)playable SWIFT_WARN_UNUSED_RESULT;
+@end
+
+
 SWIFT_CLASS("_TtC15AppSamuraiAdSDK11ASAdRequest")
 @interface ASAdRequest : NSObject
+@property (nonatomic, copy) NSArray<NSString *> * _Nonnull testDevices;
+@property (nonatomic, copy) NSArray<ASAdFormat *> * _Nonnull supportedFormats;
 - (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
 @end
 
@@ -223,13 +238,14 @@ SWIFT_CLASS_PROPERTY(@property (nonatomic, class, readonly, strong) ASAdSize * _
 @class UIViewController;
 @class WKWebView;
 @class WKNavigationAction;
+@class WKNavigation;
 
 SWIFT_CLASS_NAMED("ASBannerView")
 @interface ASBannerView : UIView <WKNavigationDelegate>
 @property (nonatomic, copy) NSString * _Nullable adUnitID;
 @property (nonatomic, strong) ASAdSize * _Nonnull adSize;
-@property (nonatomic, strong) id <ASBannerViewDelegate> _Nullable delegate;
-@property (nonatomic, strong) UIViewController * _Nullable rootViewController;
+@property (nonatomic, weak) id <ASBannerViewDelegate> _Nullable delegate;
+@property (nonatomic, weak) UIViewController * _Nullable rootViewController;
 @property (nonatomic) BOOL isAutoloadEnabled;
 - (nonnull instancetype)init SWIFT_UNAVAILABLE;
 + (nonnull instancetype)new SWIFT_DEPRECATED_MSG("-init is unavailable");
@@ -237,8 +253,10 @@ SWIFT_CLASS_NAMED("ASBannerView")
 - (nonnull instancetype)initWithAdSize:(ASAdSize * _Nonnull)adSize origin:(CGPoint)origin;
 - (nonnull instancetype)initWithFrame:(CGRect)frame OBJC_DESIGNATED_INITIALIZER;
 - (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)aDecoder OBJC_DESIGNATED_INITIALIZER;
-- (void)loadAdWithAdRequest:(ASAdRequest * _Nonnull)adRequest;
+- (void)loadAdWithAdRequest:(ASAdRequest * _Nullable)adRequest;
 - (void)webView:(WKWebView * _Nonnull)webView decidePolicyForNavigationAction:(WKNavigationAction * _Nonnull)navigationAction decisionHandler:(void (^ _Nonnull)(WKNavigationActionPolicy))decisionHandler;
+- (void)webView:(WKWebView * _Nonnull)webView didFinishNavigation:(WKNavigation * _Null_unspecified)navigation;
+- (void)removeFromSuperview;
 @end
 
 
@@ -255,7 +273,7 @@ SWIFT_PROTOCOL("_TtP15AppSamuraiAdSDK20ASBannerViewDelegate_")
 SWIFT_CLASS("_TtC15AppSamuraiAdSDK14ASInterstitial")
 @interface ASInterstitial : NSObject
 @property (nonatomic, readonly, copy) NSString * _Nullable adUnitID;
-@property (nonatomic, strong) id <ASInterstitialDelegate> _Nullable delegate;
+@property (nonatomic, weak) id <ASInterstitialDelegate> _Nullable delegate;
 @property (nonatomic, readonly) BOOL isReady;
 @property (nonatomic, readonly) BOOL hasBeenUsed;
 - (nonnull instancetype)init SWIFT_UNAVAILABLE;
@@ -278,11 +296,26 @@ SWIFT_PROTOCOL("_TtP15AppSamuraiAdSDK22ASInterstitialDelegate_")
 @end
 
 
+SWIFT_CLASS("_TtC15AppSamuraiAdSDK5ASLog")
+@interface ASLog : NSObject
+- (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
+@end
+
+typedef SWIFT_ENUM(NSInteger, ASLogLevel, closed) {
+  ASLogLevelDebug = 0,
+  ASLogLevelWarning = 1,
+  ASLogLevelError = 2,
+  ASLogLevelOff = 3,
+};
+
+
 SWIFT_CLASS("_TtC15AppSamuraiAdSDK11ASMobileAds")
 @interface ASMobileAds : NSObject
 + (void)initialize:(NSString * _Nonnull)applicationId;
 - (nonnull instancetype)init SWIFT_UNAVAILABLE;
 + (nonnull instancetype)new SWIFT_DEPRECATED_MSG("-init is unavailable");
++ (void)setLogLevelWithLogLevel:(enum ASLogLevel)logLevel;
++ (NSString * _Nonnull)getSDKVersion SWIFT_WARN_UNUSED_RESULT;
 @end
 
 @protocol ASRewardBasedVideoAdDelegate;
@@ -290,7 +323,7 @@ SWIFT_CLASS("_TtC15AppSamuraiAdSDK11ASMobileAds")
 SWIFT_CLASS("_TtC15AppSamuraiAdSDK20ASRewardBasedVideoAd")
 @interface ASRewardBasedVideoAd : NSObject
 @property (nonatomic, readonly, copy) NSString * _Nullable adUnitID;
-@property (nonatomic, strong) id <ASRewardBasedVideoAdDelegate> _Nullable delegate;
+@property (nonatomic, weak) id <ASRewardBasedVideoAdDelegate> _Nullable delegate;
 @property (nonatomic, readonly) BOOL isReady;
 - (nonnull instancetype)init SWIFT_UNAVAILABLE;
 + (nonnull instancetype)new SWIFT_DEPRECATED_MSG("-init is unavailable");
