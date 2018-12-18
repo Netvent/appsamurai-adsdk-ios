@@ -1,6 +1,7 @@
 # AppSamurai Ad SDK
 [![alt text](https://appsamurai.com/wp-content/uploads/2018/10/as_dark_logotype-8.png "AppSamurai")](https://www.appsamurai.com)
 ## Getting Started
+AppSamurai Ad SDK targets iOS 8 or higher
 ### Using CocoaPods
 AppSamuraiAdSDK is available through [CocoaPods](https://cocoapods.org). To install
 it, simply add the following line to your Podfile:
@@ -18,6 +19,13 @@ import AppSamuraiAdSDK
 ```objc
 @import AppSamuraiAdSDK;
 ```
+You can check version of SDK with `getSDKVersion` method
+```swift
+ASMobileAds.getSDKVersion()
+```
+```objc
+[ASMobileAds getSDKVersion];
+```
 ## ASMobileAds Initialization
 ASMobileAds is required to configuration of ad units. Application can not request any ad before ASMobileAds initialization is complete.
 In application’s `didFinishLaunchingWithOptions` callback, call  `ASMobileAds.initialize` function with `applicationId` parameter. This parameter should be your application id from [AppSamurai Monetization Dashboard](https://appsamurai.com/app-monetization/), you can use test application id for development purposes. Check following code for sample;
@@ -25,7 +33,7 @@ In application’s `didFinishLaunchingWithOptions` callback, call  `ASMobileAds.
 ASMobileAds.initialize(applicationId: "appsamurai-sample-ios-app-id")
 ```
 ```objc
-[ASMobileAds initializeWithApplicationId:@"appsamurai-sample-ios-app-id"];
+[ASMobileAds initialize:@"appsamurai-sample-ios-app-id"];
 ```
 ## Test Units
 AppSamuraiAdSDK uses test ads when one of the following conditions satisfy;
@@ -42,6 +50,7 @@ ASMobileAds.setLogLevel(logLevel: .debug)
 [ASMobileAds setLogLevelWithLogLevel:ASLogLevelDebug];
 ```
 ## Banner Ads
+For current version, AppSamurai Ad SDK  only support 320x50 banner size, which is represented by ASAdSize.asAdSizeBanner.
 You need to create a ASBannerView to display banner ads. It can be done via two approaches;
 * From Storyboard
 ASBannerView can be added to storyboard and xib file by defining `Custom Class` as ASBannerView in `Identity Inspector`. In this approach, setting `width` and `height` constraints is a must. For example, set  `width` and `height` 320 and 50 respectively for Banner_320x50.
@@ -144,15 +153,15 @@ _asInterstitial = [[ASInterstitial alloc] initWithAdUnitID:@"appsamurai-sample-i
 ```
 You’re ready to load ad.
 ```swift
-asInterstitial?.loadAd(adRequest: ASAdRequest())
+asInterstitial.loadAd(adRequest: ASAdRequest())
 ```
 ```objc
 [_asInterstitial loadAdWithAdRequest:[[ASAdRequest alloc] init]];
 ```
 After loading completed, you can present ad any time. ASInterstitial needs be ready and has not used before to be presented. You need to check before presenting, otherwise `interstitialDidFailToReceiveAd` is dispatched with related error.
 ```swift
-if (asInterstitial?.isReady ?? false) && !(asInterstitial?.hasBeenUsed ?? true) {
-    asInterstitial?.present(rootViewController: self)
+if asInterstitial.isReady && !asInterstitial?.hasBeenUsed {
+    asInterstitial.present(rootViewController: self)
 }
 ```
 ```objc
@@ -233,19 +242,19 @@ _asRewardBasedVideoAd = [[ASRewardBasedVideoAd alloc] initWithAdUnitID:@"appsamu
 ```
 You’re ready to load ad.
 ```swift
-asRewardBasedVideoAd?.loadAd(adRequest: ASAdRequest())
+asRewardBasedVideoAd.loadAd(adRequest: ASAdRequest())
 ```
 ```objc
 [_asRewardBasedVideoAd loadAdWithAdRequest:[[ASAdRequest alloc] init]];
 ```
 After loading completed, you can present ad any time. ASRewardBasedVideoAd needs be ready to be presented. You need to check before presenting, otherwise `rewardBasedVideoAdDidFailToReceiveAd` is dispatched with related error.
 ```swift
-if asRewardBasedVideoAd?.isReady ?? false {
-    asRewardBasedVideoAd?.present(rootViewController: self)
+if asRewardBasedVideoAd.isReady {
+    asRewardBasedVideoAd.present(rootViewController: self)
 }
 ```
 ```objc
-if (_asRewardBasedVideoAd != nil && _asRewardBasedVideoAd.isReady) {
+if (_asRewardBasedVideoAd.isReady) {
     [_asRewardBasedVideoAd presentWithRootViewController:self];
 }
 ```
