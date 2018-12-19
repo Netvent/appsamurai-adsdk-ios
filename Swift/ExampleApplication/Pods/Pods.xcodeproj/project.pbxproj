@@ -14,20 +14,21 @@
 
 /* Begin PBXFileReference section */
 		03E11F06388D864E58957998E290432E /* Pods-ExampleApplication-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-ExampleApplication-resources.sh"; sourceTree = "<group>"; };
+		1B5926FECFFBB1CF4D79D58F894E81F7 /* OMSDK_Appsamurai.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OMSDK_Appsamurai.framework; path = Frameworks/OMSDK_Appsamurai.framework; sourceTree = "<group>"; };
 		2819E056454FA7E1BF8F7CDCA1470CFA /* Pods-ExampleApplication.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-ExampleApplication.debug.xcconfig"; sourceTree = "<group>"; };
 		298D3BD765F08703428872B8C5639D94 /* Pods-ExampleApplication-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-ExampleApplication-dummy.m"; sourceTree = "<group>"; };
 		2A12D83A25CE9E5A1D5E98D23998277C /* Pods_ExampleApplication.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_ExampleApplication.framework; path = "Pods-ExampleApplication.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
 		2BC2017017AD58160B6ED1D85551CF82 /* Pods-ExampleApplication.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-ExampleApplication.modulemap"; sourceTree = "<group>"; };
-		45E06307CE9F2475E298EE6DD23F2420 /* AppSamuraiAdSDK.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = AppSamuraiAdSDK.h; path = AppSamuraiAdSDK.framework/Headers/AppSamuraiAdSDK.h; sourceTree = "<group>"; };
-		53263AFD27807606A78195D38C9225E4 /* AppSamuraiAdSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = AppSamuraiAdSDK.framework; sourceTree = "<group>"; };
+		48A47963ED5AB2E56EBA7C1B8BE2373E /* AppSamuraiAdSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppSamuraiAdSDK.framework; path = Frameworks/AppSamuraiAdSDK.framework; sourceTree = "<group>"; };
 		5A16F4CFC63FAC439D7A04994F579A03 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS11.3.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
 		6DDE796B052CBD382831D53CFCBFDF59 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7B769BC8EA82299F616E1CE1BA2307A5 /* AppSamuraiAdSDK.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = AppSamuraiAdSDK.h; path = Frameworks/AppSamuraiAdSDK.framework/Headers/AppSamuraiAdSDK.h; sourceTree = "<group>"; };
 		92E1C94D13CF1845DCEBE689C1C1DA19 /* Pods-ExampleApplication-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-ExampleApplication-umbrella.h"; sourceTree = "<group>"; };
 		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
-		99374347F8EB4BF90BEE4115A0E35D35 /* AppSamuraiAdSDK-Swift.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "AppSamuraiAdSDK-Swift.h"; path = "AppSamuraiAdSDK.framework/Headers/AppSamuraiAdSDK-Swift.h"; sourceTree = "<group>"; };
 		9FDD2823DEA44096120A3BAB44E130D0 /* Pods-ExampleApplication-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-ExampleApplication-frameworks.sh"; sourceTree = "<group>"; };
 		A50B5B351196ADE17E297FE43C515E09 /* Pods-ExampleApplication-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-ExampleApplication-acknowledgements.markdown"; sourceTree = "<group>"; };
 		DDFC794A8C82F854CF2453F3EED43FEA /* Pods-ExampleApplication-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-ExampleApplication-acknowledgements.plist"; sourceTree = "<group>"; };
+		DF579DCBEC93D1762F97086A2F3A8AB9 /* AppSamuraiAdSDK-Swift.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "AppSamuraiAdSDK-Swift.h"; path = "Frameworks/AppSamuraiAdSDK.framework/Headers/AppSamuraiAdSDK-Swift.h"; sourceTree = "<group>"; };
 		E30066A10F255EA91D678F57BC8E31EB /* Pods-ExampleApplication.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-ExampleApplication.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -43,29 +44,10 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		05BC511F9CF05A3F650394D346EF3688 /* AppSamuraiAdSDK */ = {
-			isa = PBXGroup;
-			children = (
-				45E06307CE9F2475E298EE6DD23F2420 /* AppSamuraiAdSDK.h */,
-				99374347F8EB4BF90BEE4115A0E35D35 /* AppSamuraiAdSDK-Swift.h */,
-				0EE86DEF7A2A0C98A3AE524171573850 /* Frameworks */,
-			);
-			name = AppSamuraiAdSDK;
-			path = AppSamuraiAdSDK;
-			sourceTree = "<group>";
-		};
-		0EE86DEF7A2A0C98A3AE524171573850 /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				53263AFD27807606A78195D38C9225E4 /* AppSamuraiAdSDK.framework */,
-			);
-			name = Frameworks;
-			sourceTree = "<group>";
-		};
 		1E66E7C1CB186B50D503381F4C6320FF /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				05BC511F9CF05A3F650394D346EF3688 /* AppSamuraiAdSDK */,
+				8028359E514004D1598D83A4CBF891C6 /* AppSamuraiAdSDK */,
 			);
 			name = Pods;
 			sourceTree = "<group>";
@@ -86,6 +68,15 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
+		692D2E714AABA6B91A2B3C45C80F8C6F /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				48A47963ED5AB2E56EBA7C1B8BE2373E /* AppSamuraiAdSDK.framework */,
+				1B5926FECFFBB1CF4D79D58F894E81F7 /* OMSDK_Appsamurai.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		7DB346D0F39D3F0E887471402A8071AB = {
 			isa = PBXGroup;
 			children = (
@@ -95,6 +86,17 @@
 				628D35C84EA893125CA062A89466F9C9 /* Products */,
 				851153D6DD1A60838CF5EDD0AF6FB91A /* Targets Support Files */,
 			);
+			sourceTree = "<group>";
+		};
+		8028359E514004D1598D83A4CBF891C6 /* AppSamuraiAdSDK */ = {
+			isa = PBXGroup;
+			children = (
+				7B769BC8EA82299F616E1CE1BA2307A5 /* AppSamuraiAdSDK.h */,
+				DF579DCBEC93D1762F97086A2F3A8AB9 /* AppSamuraiAdSDK-Swift.h */,
+				692D2E714AABA6B91A2B3C45C80F8C6F /* Frameworks */,
+			);
+			name = AppSamuraiAdSDK;
+			path = AppSamuraiAdSDK;
 			sourceTree = "<group>";
 		};
 		851153D6DD1A60838CF5EDD0AF6FB91A /* Targets Support Files */ = {

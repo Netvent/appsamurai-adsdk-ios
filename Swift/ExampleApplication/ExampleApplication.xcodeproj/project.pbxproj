@@ -137,7 +137,7 @@
 				A1FAE84D21A6A139000DEFEA /* Frameworks */,
 				A1FAE84E21A6A139000DEFEA /* Resources */,
 				A1FAE86721A6BFCA000DEFEA /* Embed Frameworks */,
-				B24D6659C32BE941C8F35A1A /* [CP] Embed Pods Frameworks */,
+				A6F07236E7D0E050FFF3C4D2 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -195,7 +195,7 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		B24D6659C32BE941C8F35A1A /* [CP] Embed Pods Frameworks */ = {
+		A6F07236E7D0E050FFF3C4D2 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -204,7 +204,7 @@
 			);
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-ExampleApplication/Pods-ExampleApplication-frameworks.sh",
-				"${PODS_ROOT}/AppSamuraiAdSDK/AppSamuraiAdSDK.framework",
+				"${PODS_ROOT}/AppSamuraiAdSDK/Frameworks/AppSamuraiAdSDK.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputFileListPaths = (
