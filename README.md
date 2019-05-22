@@ -19,7 +19,7 @@ It is also required to set `Always Embed Swift Libraries` to `Yes` from `Build S
 #### Strip Unwanted Architectures
 You need to do following steps to remove unwanted architectures to archive the applicaiton for the App Store; 
 * Go to `Build Phases` in application target
-* Add `New Run Script Phase` and add [strip.frameworks.sh](https://raw.githubusercontent.com/Netvent/appsamurai-adsdk-ios/master/strip-frameworks.sh) content in the text box.
+* Add `New Run Script Phase` and add [strip-frameworks.sh](https://raw.githubusercontent.com/Netvent/appsamurai-adsdk-ios/master/strip-frameworks.sh) content in the text box.
 ## ASMobileAds Import
 Application needs to import related modules to use AppSamuraiAdSDK. Add following lines to `import`’s to achieve this;
 
