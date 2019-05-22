@@ -1,5 +1,5 @@
 PODS:
-  - AppSamuraiAdSDK (0.9.14)
+  - AppSamuraiAdSDK (1.3.1)
 
 DEPENDENCIES:
   - AppSamuraiAdSDK
@@ -9,8 +9,8 @@ SPEC REPOS:
     - AppSamuraiAdSDK
 
 SPEC CHECKSUMS:
-  AppSamuraiAdSDK: b85e743a3290601decde67e8279d4fa06d2d3432
+  AppSamuraiAdSDK: 0d32c9260ce21bb33b9f57eaa0be78310663e638
 
 PODFILE CHECKSUM: 200837f38d20fbfd07262fd418dc201db4adc250
 
-COCOAPODS: 1.5.3
+COCOAPODS: 1.6.1

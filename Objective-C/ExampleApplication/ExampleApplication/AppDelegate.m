@@ -7,7 +7,7 @@
 //
 
 #import "AppDelegate.h"
-#import <AppSamuraiAdSDK/AppSamuraiAdSDK.h>
+@import AppSamuraiAdSDK;
 
 @interface AppDelegate ()
 

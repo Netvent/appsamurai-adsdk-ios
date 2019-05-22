@@ -2,14 +2,24 @@
 [![alt text](https://appsamurai.com/wp-content/uploads/2018/10/as_dark_logotype-8.png "AppSamurai")](https://www.appsamurai.com)
 ## Getting Started
 AppSamurai Ad SDK targets iOS 8 or higher
-### Using CocoaPods
+### Using CocoaPods (preferred)
 AppSamuraiAdSDK is available through [CocoaPods](https://cocoapods.org). To install
 it, simply add the following line to your Podfile:
-
 ```ruby
 pod 'AppSamuraiAdSDK'
 ```
 It is also required to set `Always Embed Swift Libraries` to `Yes` from `Build Settings` for projects written in Objective-C
+### Manual Integration
+Download latest SDK from [Releases](https://github.com/Netvent/appsamurai-adsdk-ios/releases) and unzip it. Import the following framework into your Xcode project:
+* AppSamuraiAdSDK.framework
+* OMSDK_Appsamurai.framework
+
+Add `AppSamuraiAdSDK.framework` to `Embedded Binaries` in `General`.
+It is also required to set `Always Embed Swift Libraries` to `Yes` from `Build Settings` for projects written in Objective-C
+#### Strip Unwanted Architectures
+You need to do following steps to remove unwanted architectures to archive the applicaiton for the App Store; 
+* Go to `Build Phases` in application target
+* Add `New Run Script Phase` and add [strip.frameworks.sh](https://raw.githubusercontent.com/Netvent/appsamurai-adsdk-ios/master/strip.frameworks.sh) content in the text box.
 ## ASMobileAds Import
 Application needs to import related modules to use AppSamuraiAdSDK. Add following lines to `import`’s to achieve this;
 

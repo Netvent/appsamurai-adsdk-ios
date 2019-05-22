@@ -16,24 +16,7 @@
 		A1FAE85921A6A139000DEFEA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A1FAE85721A6A139000DEFEA /* Main.storyboard */; };
 		A1FAE85B21A6A13B000DEFEA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A1FAE85A21A6A13B000DEFEA /* Assets.xcassets */; };
 		A1FAE85E21A6A13B000DEFEA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A1FAE85C21A6A13B000DEFEA /* LaunchScreen.storyboard */; };
-		A1FAE86521A6BFCA000DEFEA /* Pods_ExampleApplication.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 216740F805AE63C2001AD488 /* Pods_ExampleApplication.framework */; };
-		A1FAE86621A6BFCA000DEFEA /* Pods_ExampleApplication.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 216740F805AE63C2001AD488 /* Pods_ExampleApplication.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		CC1E924CC2FBD619E8E54360 /* Pods_ExampleApplication.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 216740F805AE63C2001AD488 /* Pods_ExampleApplication.framework */; };
 /* End PBXBuildFile section */
-
-/* Begin PBXCopyFilesBuildPhase section */
-		A1FAE86721A6BFCA000DEFEA /* Embed Frameworks */ = {
-			isa = PBXCopyFilesBuildPhase;
-			buildActionMask = 2147483647;
-			dstPath = "";
-			dstSubfolderSpec = 10;
-			files = (
-				A1FAE86621A6BFCA000DEFEA /* Pods_ExampleApplication.framework in Embed Frameworks */,
-			);
-			name = "Embed Frameworks";
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		216740F805AE63C2001AD488 /* Pods_ExampleApplication.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ExampleApplication.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -57,8 +40,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A1FAE86521A6BFCA000DEFEA /* Pods_ExampleApplication.framework in Frameworks */,
-				CC1E924CC2FBD619E8E54360 /* Pods_ExampleApplication.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -136,7 +117,6 @@
 				A1FAE84C21A6A139000DEFEA /* Sources */,
 				A1FAE84D21A6A139000DEFEA /* Frameworks */,
 				A1FAE84E21A6A139000DEFEA /* Resources */,
-				A1FAE86721A6BFCA000DEFEA /* Embed Frameworks */,
 				A6F07236E7D0E050FFF3C4D2 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
@@ -203,7 +183,7 @@
 			inputFileListPaths = (
 			);
 			inputPaths = (
-				"${SRCROOT}/Pods/Target Support Files/Pods-ExampleApplication/Pods-ExampleApplication-frameworks.sh",
+				"${PODS_ROOT}/Target Support Files/Pods-ExampleApplication/Pods-ExampleApplication-frameworks.sh",
 				"${PODS_ROOT}/AppSamuraiAdSDK/Frameworks/AppSamuraiAdSDK.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
@@ -214,7 +194,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ExampleApplication/Pods-ExampleApplication-frameworks.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-ExampleApplication/Pods-ExampleApplication-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		F2889F68EE1BE283F1E43C55 /* [CP] Check Pods Manifest.lock */ = {
@@ -399,6 +379,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 6M3HAPKN9X;
 				INFOPLIST_FILE = ExampleApplication/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -406,7 +387,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.appsamurai.adsdk.ExampleApplication;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -417,6 +398,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 6M3HAPKN9X;
 				INFOPLIST_FILE = ExampleApplication/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -424,7 +406,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.appsamurai.adsdk.ExampleApplication;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
