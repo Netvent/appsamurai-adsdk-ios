@@ -19,6 +19,8 @@ class BannerProgramaticallyViewController: UIViewController, ASBannerViewDelegat
         let asBannerView = ASBannerView(adSize: .asAdSizeBanner)
         // adUnitID must be set to load correct ad. Use test id for debugging purposes
         asBannerView.adUnitID = "appsamurai-sample-ios-banner-ad-id"
+        // Optional gadAdUnitID for those who want to use Google Ad Mob flow
+//        asBannerView.gadAdUnitID = "/6499/example/banner"
         // rootViewController must be set to display overlay when ad is clicked
         asBannerView.rootViewController = self
         // delegate is used to receive ad events

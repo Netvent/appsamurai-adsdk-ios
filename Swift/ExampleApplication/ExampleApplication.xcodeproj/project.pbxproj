@@ -16,6 +16,7 @@
 		A1FAE85921A6A139000DEFEA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A1FAE85721A6A139000DEFEA /* Main.storyboard */; };
 		A1FAE85B21A6A13B000DEFEA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A1FAE85A21A6A13B000DEFEA /* Assets.xcassets */; };
 		A1FAE85E21A6A13B000DEFEA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A1FAE85C21A6A13B000DEFEA /* LaunchScreen.storyboard */; };
+		FF9AA4B2F410D5EACB0B5E17 /* Pods_ExampleApplication.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 216740F805AE63C2001AD488 /* Pods_ExampleApplication.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -40,6 +41,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FF9AA4B2F410D5EACB0B5E17 /* Pods_ExampleApplication.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -181,16 +183,11 @@
 			files = (
 			);
 			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-ExampleApplication/Pods-ExampleApplication-frameworks.sh",
-				"${PODS_ROOT}/AppSamuraiAdSDK/Frameworks/AppSamuraiAdSDK.framework",
+				"${PODS_ROOT}/Target Support Files/Pods-ExampleApplication/Pods-ExampleApplication-frameworks-${CONFIGURATION}-input-files.xcfilelist",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputFileListPaths = (
-			);
-			outputPaths = (
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AppSamuraiAdSDK.framework",
+				"${PODS_ROOT}/Target Support Files/Pods-ExampleApplication/Pods-ExampleApplication-frameworks-${CONFIGURATION}-output-files.xcfilelist",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;

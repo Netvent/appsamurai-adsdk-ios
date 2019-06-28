@@ -22,6 +22,8 @@
     
     // Initialize ASRewardBasedVideoAd
     _asRewardBasedVideoAd = [[ASRewardBasedVideoAd alloc] initWithAdUnitID:@"appsamurai-sample-ios-rewardbasedvideo-ad-id"];
+    // Initialize ASRewardBasedVideoAd with optional gadAdUnitID for those who want to use Google Ad Mob flow
+//    _asRewardBasedVideoAd = [[ASRewardBasedVideoAd alloc] initWithAdUnitID:@"appsamurai-sample-ios-rewardbasedvideo-ad-id" gadAdUnitID:@"/6499/example/rewarded-video"];
     // delegate is used to receive ad events
     _asRewardBasedVideoAd.delegate = self;
     

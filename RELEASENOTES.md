@@ -1,4 +1,10 @@
 # Release Notes
+### 1.4.0
+* Add AdMob simple waterfall usage, please refer documentation for details
+
+### 1.3.3
+* Fix VALID_ARCHS list for release process
+
 ### 1.3.2
 * Add inline video support
 * Add headphone plugged check for targeting

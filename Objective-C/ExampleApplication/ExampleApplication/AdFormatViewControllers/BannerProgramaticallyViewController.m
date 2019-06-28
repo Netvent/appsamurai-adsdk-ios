@@ -24,6 +24,8 @@
     self.asBannerView = [[ASBannerView alloc] initWithAdSize: ASAdSize.asAdSizeBanner];
     // adUnitID must be set to load correct ad. Use test id for debugging purposes
     self.asBannerView.adUnitID = @"appsamurai-sample-ios-banner-ad-id";
+    // Optional gadAdUnitID for those who want to use Google Ad Mob flow
+//    self.asBannerView.gadAdUnitID = @"/6499/example/banner";
     // rootViewController must be set to display overlay when ad is clicked
     self.asBannerView.rootViewController = self;
     // delegate is used to receive ad events

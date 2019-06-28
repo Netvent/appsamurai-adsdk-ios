@@ -23,6 +23,8 @@
     
     // Initialize ASInterstitial
     _asInterstitial = [[ASInterstitial alloc] initWithAdUnitID:@"appsamurai-sample-ios-interstitial-ad-id"];
+    // Initialize ASInterstitial with optional gadAdUnitID for those who want to use Google Ad Mob flow
+//    _asInterstitial = [[ASInterstitial alloc] initWithAdUnitID:@"appsamurai-sample-ios-interstitial-ad-id" gadAdUnitID:@"/6499/example/interstitial"];
     // delegate is used to receive ad events
     _asInterstitial.delegate = self;
     

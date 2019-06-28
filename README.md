@@ -1,7 +1,9 @@
 # AppSamurai Ad SDK
 [![alt text](https://appsamurai.com/wp-content/uploads/2018/10/as_dark_logotype-8.png "AppSamurai")](https://www.appsamurai.com)
 ## Getting Started
-AppSamurai Ad SDK targets iOS 8 or higher
+AppSamurai Ad SDK targets iOS 8 or higher.
+
+You can use [Google AdMob](https://developers.google.com/ad-manager/) for backup.  Simply follow [Google AdMob Mobile Ads SDK(IOS) - Getting Started](https://developers.google.com/ad-manager/mobile-ads-sdk/ios/quick-start) steps and refer to initialization steps for each ad unit of AppSamuraiAdSDK for [Google AdMob](https://developers.google.com/ad-manager/) ’s unitId settings. Moreover, you need to contact with team for required further configurations.  
 ### Using CocoaPods (preferred)
 AppSamuraiAdSDK is available through [CocoaPods](https://cocoapods.org). To install
 it, simply add the following line to your Podfile:
@@ -105,12 +107,17 @@ self.asBannerView = [[ASBannerView alloc] initWithAdSize: ASAdSize.asAdSizeBanne
                                                        constant:1]];
 ```
 ASBannerView is now ready as view and it needs to be configured to display ad correctly.  `adUnitID` must be set. You need to use test id for debugging purposes. In simulator, test ads are used automatically. `rootViewController` must be set to present overlay when ad is clicked.
+Please note that , you can pass Google AdMob banner ad unit id for backup usage. 
 ```swift
 asBannerView.adUnitID = "appsamurai-sample-ios-banner-ad-id"
+// Optional gadAdUnitID for those who want to use Google Ad Mob flow
+asBannerView.gadAdUnitID = "/6499/example/banner"
 asBannerView.rootViewController = self
 ```
 ```objc
 self.asBannerView.adUnitID = @"appsamurai-sample-ios-banner-ad-id";
+// Optional gadAdUnitID for those who want to use Google Ad Mob flow
+self.asBannerView.gadAdUnitID = @"/6499/example/banner";
 self.asBannerView.rootViewController = self;
 ```
 You’re ready to load ad.
@@ -155,11 +162,16 @@ func adViewWillLeaveApplication(_ asBannerView: ASBannerView) {
 ```
 ## Interstitial
 You need to create new ASInterstitial object each time when you want to display interstitial ad.
+Please note that , you can pass Google AdMob interstitial ad unit id for backup usage. 
 ```swift
 asInterstitial = ASInterstitial(adUnitID: "appsamurai-sample-ios-interstitial-ad-id")
+// Initialize ASInterstitial with optional gadAdUnitID for those who want to use Google Ad Mob flow
+asInterstitial = ASInterstitial(adUnitID: "appsamurai-sample-ios-interstitial-ad-id", gadAdUnitID: "/6499/example/interstitial")
 ```
 ```objc
 _asInterstitial = [[ASInterstitial alloc] initWithAdUnitID:@"appsamurai-sample-ios-interstitial-ad-id"];
+// Initialize ASInterstitial with optional gadAdUnitID for those who want to use Google Ad Mob flow
+_asInterstitial = [[ASInterstitial alloc] initWithAdUnitID:@"appsamurai-sample-ios-interstitial-ad-id" gadAdUnitID:@"/6499/example/interstitial"];
 ```
 You’re ready to load ad.
 ```swift
@@ -244,11 +256,16 @@ func interstitialWillLeaveApplication(_ asInterstitial: ASInterstitial) {
 ```
 ## RewardBasedVideoAd
 You need to create new ASRewardBasedVideoAd object each time when you want to display interstitial ad.
+Please note that , you can pass Google AdMob interstitial ad unit id for backup usage. 
 ```swift
 asRewardBasedVideoAd = ASRewardBasedVideoAd(adUnitID: "appsamurai-sample-ios-rewardbasedvideo-ad-id")
+// Initialize ASRewardBasedVideoAd with optional gadAdUnitID for those who want to use Google Ad Mob flow
+asRewardBasedVideoAd = ASRewardBasedVideoAd(adUnitID: "appsamurai-sample-ios-rewardbasedvideo-ad-id", gadAdUnitID: "/6499/example/rewarded-video")
 ```
 ```objc
 _asRewardBasedVideoAd = [[ASRewardBasedVideoAd alloc] initWithAdUnitID:@"appsamurai-sample-ios-rewardbasedvideo-ad-id"];
+// Initialize ASRewardBasedVideoAd with optional gadAdUnitID for those who want to use Google Ad Mob flow
+_asRewardBasedVideoAd = [[ASRewardBasedVideoAd alloc] initWithAdUnitID:@"appsamurai-sample-ios-rewardbasedvideo-ad-id" gadAdUnitID:@"/6499/example/rewarded-video"];
 ```
 You’re ready to load ad.
 ```swift

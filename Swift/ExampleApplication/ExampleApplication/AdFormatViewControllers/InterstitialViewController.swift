@@ -20,6 +20,8 @@ class InterstitialViewController: UIViewController, ASInterstitialDelegate {
         
         // Initialize ASInterstitial
         asInterstitial = ASInterstitial(adUnitID: "appsamurai-sample-ios-interstitial-ad-id")
+        // Initialize ASInterstitial with optional gadAdUnitID for those who want to use Google Ad Mob flow
+//        asInterstitial = ASInterstitial(adUnitID: "appsamurai-sample-ios-interstitial-ad-id", gadAdUnitID: "/6499/example/interstitial")
         // delegate is used to receive ad events
         asInterstitial?.delegate = self
         
