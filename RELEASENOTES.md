@@ -1,4 +1,7 @@
 # Release Notes
+### 1.4.1
+* Swift 5.1 compatibility
+
 ### 1.4.0
 * Add AdMob simple waterfall usage, please refer documentation for details
 
