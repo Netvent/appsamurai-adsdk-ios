@@ -12,16 +12,16 @@ let package = Package(
         // Products define the executables and libraries a package produces, and make them visible to other packages.
         .library(
             name: "Storyly",
-            targets: ["Storyly"]
+            targets: ["StorylyTargets"]
         ),
     ],
     dependencies: [
         // Dependencies declare other packages that this package depends on.
         // .package(url: /* package url */, from: "1.0.0"),
         .package(
-            name:"SDWebImage", 
-            url: "https://github.com/SDWebImage/SDWebImage.git", 
-            from: "5.10.0"
+            name:"SDWebImage",
+            url: "https://github.com/SDWebImage/SDWebImage.git",
+            .exact("5.10.0")
         ),
     ],
     targets: [
@@ -29,11 +29,15 @@ let package = Package(
         // Targets can depend on other targets in this package, and on products in packages this package depends on.
         .binaryTarget(
             name: "Storyly",
-            dependencies: [
-                "SDWebImage"
-            ],
             url: "https://prod-storyly-media.s3-eu-west-1.amazonaws.com/storyly-sdk/1.15.0/Storyly.zip",
-            checksum: "c1df599f59a3be7b1ff0959fc503b0f2b4a9e80d96910e6fa9256048d129c310",
+            checksum: "c1df599f59a3be7b1ff0959fc503b0f2b4a9e80d96910e6fa9256048d129c310"
         ),
+        .target(name: "StorylyTargets",
+            dependencies: [
+                .target(name: "Storyly"),
+                .product(name: "SDWebImage", package: "SDWebImage")
+            ],
+            path: "Sources"
+        )
     ]
 )
