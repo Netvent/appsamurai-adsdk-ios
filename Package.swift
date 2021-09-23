@@ -26,7 +26,8 @@ let package = Package(
         .binaryTarget(
             name: "Storyly",
             url: "https://prod-storyly-media.s3-eu-west-1.amazonaws.com/storyly-sdk/1.15.0/Storyly.zip",
-            checksum: "c1df599f59a3be7b1ff0959fc503b0f2b4a9e80d96910e6fa9256048d129c310"
+            checksum: "c1df599f59a3be7b1ff0959fc503b0f2b4a9e80d96910e6fa9256048d129c310",
+            dependencies: ["SDWebImage"]
         ),
     ]
 )
