@@ -37,8 +37,7 @@ let package = Package(
                 .target(name: "Storyly"),
                 .product(name: "SDWebImage", package: "SDWebImage")
             ],
-            path: "Storyly",
-            sources: ["Storyly"]
+            path: "Source"
         )
     ]
 )
