@@ -27,17 +27,17 @@ let package = Package(
     targets: [
         // Targets are the basic building blocks of a package. A target can define a module or a test suite.
         // Targets can depend on other targets in this package, and on products in packages this package depends on.
+        .target(name: "StorylyTargets",
+            dependencies: [
+                "Storyly",
+                .product(name: "SDWebImage", package: "SDWebImage")
+            ],
+            path: "Sources"
+        ),
         .binaryTarget(
             name: "Storyly",
             url: "https://prod-storyly-media.s3-eu-west-1.amazonaws.com/storyly-sdk/1.15.0/Storyly.zip",
             checksum: "c1df599f59a3be7b1ff0959fc503b0f2b4a9e80d96910e6fa9256048d129c310"
-        ),
-        .target(name: "StorylyTargets",
-            dependencies: [
-                .target(name: "Storyly"),
-                .product(name: "SDWebImage", package: "SDWebImage")
-            ],
-            path: "Sources"
         )
     ]
 )
